@@ -58,6 +58,7 @@ FFMPEG Komutu:
 ffmpeg -protocol_whitelist file,https,tls,tcp -i bilgisayar-korsani-izle-1080.m3u8 bilgisayar-korsani-izle-1080.mkv
 --------------------------------------
 ```
+Ardından bilgisayarınızda ffmpeg kurulu olduğunu varsayaraktan, ffmpeg komutunu kopyalayıp indirmeyi başlatabilir ya da m3u8 dosyasını VLC gibi bu formatı destekleyen playerda açarak izleyebilirsiniz.
 
 ## `interface.py` kullanımı:
 
@@ -73,6 +74,7 @@ $ python interface.py
 from puhu import getPlist
 
 
-# İçerisinde {`kalite`: `m3u8 data`} formatında veri vardır, kalite `144, 240, 360, 480, 720, 1080` değerleridir.
-# m3u8 data ise direk m3u8 formatında veridir. Dosyaya kaydetmekte kullanabilirsiniz.
+# İçerisinde {`kalite`: `m3u8 data`, `kalite`: `m3u8 data`} formatında veri vardır,
+# kalite `144, 240, 360, 480, 720, 1080` değerleridir. m3u8 data ise direk m3u8
+# formatında veridir. Dosyaya kaydetmekte kullanabilirsiniz.
 m3u8 = getPlist("/ejderha-gozler-izle")
